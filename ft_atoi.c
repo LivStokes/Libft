@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                         ::::::::           */
-/*   ft_memcpy.c                                         :+:    :+:           */
+/*   ft_atoi.c                                           :+:    :+:           */
 /*                                                      +:+                   */
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
-/*   Created: 2026/03/10 14:29:35 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/11 16:03:22 by olistoke       ########   odam.nl        */
+/*   Created: 2026/03/12 15:10:27 by olistoke       #+#    #+#                */
+/*   Updated: 2026/03/12 17:43:42 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
+	int	i;
+	int	sign;
+	int	result;
 
-	if (!dest && !src)
-		return (0);
 	i = 0;
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	while (i < n)
+	sign = 1;
+	result = 0;
+	while (nptr[i] == 32 || (nptr[i] > 8 && nptr[i] < 14))
+		i++;
+	while (nptr[i] == '-' || nptr[i] == '+')
 	{
-		d[i] = s[i];
+		if (nptr[i] == '-')
+			sign *= -1;
 		i++;
 	}
-	return (dest);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
