@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                         ::::::::           */
-/*   ft_isascii.c                                        :+:    :+:           */
+/*   ft_putnbr_fd.c                                      :+:    :+:           */
 /*                                                      +:+                   */
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
-/*   Created: 2026/03/10 11:26:22 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/13 11:22:15 by olistoke       ########   odam.nl        */
+/*   Created: 2026/03/16 15:23:22 by olistoke       #+#    #+#                */
+/*   Updated: 2026/03/16 15:30:55 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-int	ft_isascii(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	return (c >= 0 && c <= 127);
+	char	c;
+
+	if (n == -2147483648)
+		write(fd, "-2147483648", 1);
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	if (n > 9)
+		ft_putnbr_fd(n / 10);
+	c = (n % 10) + '0';
+	write(fd, &c, 1);
 }

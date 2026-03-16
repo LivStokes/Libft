@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/10 14:19:46 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/12 17:42:13 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/16 15:22:32 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <stddef.h>
 
 // PART 1
-
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
@@ -41,5 +40,5 @@ int		ft_atoi(const char *nptr);
 char	*ft_strdup(const char *s);
 
 // PART 2
-
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 #endif

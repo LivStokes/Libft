@@ -6,20 +6,27 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/12 16:26:49 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/12 17:04:01 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/13 16:03:52 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void	*calloc(size_t nmemb, size_t size)
+#include <stdlib.h>
+#include <stdio.h>
+
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	i;
+	char	*ptr;
 
 	i = 0;
-	while( i < (size - 1))
+	ptr = (void *)malloc(size * nmemb);
+	if (!ptr)
+		return (NULL);
+	while (i < (nmemb * size))
 	{
-		
+		ptr[i] = 0;
+		i++;
 	}
+	return (ptr);
 }
-*/

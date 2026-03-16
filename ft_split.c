@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                         ::::::::           */
-/*   ft_isascii.c                                        :+:    :+:           */
+/*   ft_split.c                                          :+:    :+:           */
 /*                                                      +:+                   */
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
-/*   Created: 2026/03/10 11:26:22 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/13 11:22:15 by olistoke       ########   odam.nl        */
+/*   Created: 2026/03/14 16:40:09 by olistoke       #+#    #+#                */
+/*   Updated: 2026/03/14 16:41:57 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isascii(int c)
+char	**ft_split(char const *s, char c)
 {
-	return (c >= 0 && c <= 127);
+
 }

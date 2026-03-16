@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                         ::::::::           */
-/*   ft_isascii.c                                        :+:    :+:           */
+/*   ft_putendl_fd.c                                     :+:    :+:           */
 /*                                                      +:+                   */
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
-/*   Created: 2026/03/10 11:26:22 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/13 11:22:15 by olistoke       ########   odam.nl        */
+/*   Created: 2026/03/16 15:09:57 by olistoke       #+#    #+#                */
+/*   Updated: 2026/03/16 15:18:51 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-int	ft_isascii(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (c >= 0 && c <= 127);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }

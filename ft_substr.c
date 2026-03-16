@@ -1,29 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                         ::::::::           */
-/*   ft_memchr.c                                         :+:    :+:           */
+/*   ft_substr.c                                         :+:    :+:           */
 /*                                                      +:+                   */
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
-/*   Created: 2026/03/12 11:49:28 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/13 14:24:17 by olistoke       ########   odam.nl        */
+/*   Created: 2026/03/13 14:38:17 by olistoke       #+#    #+#                */
+/*   Updated: 2026/03/13 19:14:31 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t			i;
-	unsigned char	*str;
+	char		*ss;
+	size_t		i;
+	size_t		slen;
 
 	i = 0;
-	str = (unsigned char *)s;
-	while (i < n)
+	slen = 0;
+	if (!s)
+		return (NULL);
+	while (s[slen])
+		s[slen]++;
+	if (start >= s_len)
+		len = 0;
+	else if (len > s_len - start)
+		len = slen - start;
+	ss = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ss)
+		return (NULL);
+	i = 0;
+	while (i < len && s[start + i])
 	{
-		if (str[i] == (unsigned char)c)
-			return ((void *)&str[i]);
+		ss[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	ss[i] = '\0';
+	return (ss);
 }

@@ -6,7 +6,7 @@
 #    By: olistoke <marvin@42.fr>                       +#+                     #
 #                                                     +#+                      #
 #    Created: 2026/03/10 14:39:21 by olistoke       #+#    #+#                 #
-#    Updated: 2026/03/12 17:15:30 by olistoke       ########   odam.nl         #
+#    Updated: 2026/03/13 16:13:00 by olistoke       ########   odam.nl         #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,8 @@ SRC = ft_strlen.c \
 	  ft_toupper.c \
 	  ft_tolower.c \
 	  ft_atoi.c \
-	  ft_calloc.c
+	  ft_calloc.c \
+	  ft_substr.c
 
 OBJS = $(SRC:.c=.o)
 
