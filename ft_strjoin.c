@@ -6,9 +6,11 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/13 19:14:52 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/13 19:28:58 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/16 18:11:41 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -29,16 +31,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = 0;
 	while (s1[i])
-	{
-		r[i] = s1[i];
-		i++;
-	}
+		r[i++] = s1[i++];
 	j = 0;
 	while (s2[j])
-	{
-		r[i + j] = s2[j];
-		j++;
-	}
+		r[i + j++] = s2[j++];
 	r[i + j] = '\0';
 	return (r);
 }

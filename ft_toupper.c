@@ -6,9 +6,11 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/11 16:22:11 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/11 16:29:13 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/16 18:09:02 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

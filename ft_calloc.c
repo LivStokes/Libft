@@ -6,13 +6,12 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/12 16:26:49 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/13 16:03:52 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/16 18:11:04 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

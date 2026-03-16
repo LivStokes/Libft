@@ -6,9 +6,11 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/11 18:00:26 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/12 17:22:19 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/16 18:09:48 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strrchr(const char *s, int c)
 {

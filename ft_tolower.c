@@ -6,9 +6,11 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/11 16:36:41 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/11 16:40:12 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/16 18:09:15 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	tolower(int c)
 {

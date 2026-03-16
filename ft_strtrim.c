@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/13 19:29:07 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/14 16:21:14 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/16 17:46:23 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!r)
 		return (NULL);
 	while (i < j)
-	{
-		r[x] = s1[i];
-		i++;
-		x++;
-	}
+		r[x++] = s1[i++];
 	r[x] = '\0';
 	return (r);
 }

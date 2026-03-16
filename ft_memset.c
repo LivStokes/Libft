@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/10 14:10:08 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/13 14:15:05 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/16 17:41:10 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*j;
 
 	i = 0;
