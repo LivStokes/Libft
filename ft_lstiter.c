@@ -1,16 +1,13 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                         ::::::::           */
+/*   ft_lstiter.c                                        :+:    :+:           */
+/*                                                      +:+                   */
+/*   By: olistoke <marvin@42.fr>                       +#+                    */
+/*                                                    +#+                     */
+/*   Created: 2026/03/18 15:34:05 by olistoke       #+#    #+#                */
+/*   Updated: 2026/03/18 15:34:07 by olistoke       ########   odam.nl        */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
-{
-    t_list  *c;
 
-    c = lst;
-    if (!c)
-        return (NULL);
-    while (c->next)
-    {
-        f(c->content);
-        c = c->next;
-    }
-    f(c->content);
-}

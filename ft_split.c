@@ -6,21 +6,23 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/14 16:40:09 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/16 17:45:28 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/18 16:52:34 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+#include <stdio.h>
 
-char	*wrdmem(char s)
+char	*wrdmem(char const *s, char c)
 {
 	int		i;
 	char	*r;
 	int		len;
 
 	i = 0;
-	len = ft_strlen(s);
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
 	r = malloc(sizeof(char) * (len + 1));
 	if (!r)
 		return (NULL);
@@ -33,7 +35,7 @@ char	*wrdmem(char s)
 	return (r);
 }
 
-int	wrdcount(char *s, char c)
+int	wrdcount(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -42,14 +44,12 @@ int	wrdcount(char *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] && c)
+		while (s[i] == c && s[i])
 			i++;
-		if (s[i] && !c)
-		{
+		if (s[i])
 			count++;
-			while (s[i] && !c)
+		while (s[i] != c && s[i])
 				i++;
-		}
 	}
 	return (count);
 }
@@ -59,30 +59,39 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	char	**r;
 	int		len;
+	int		x;
 
 	i = 0;
-	len = wrdcount(s);
-	*r = (char *)malloc(sizeof(char *) * (len + 1));
+	x = 0;
+	len = wrdcount(s, c);
+	r = (char **)malloc(sizeof(char *) * (len + 1));
 	if (!r)
 		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] && c)
+		while (s[i] == c && s[i])
 			i++;
-		if (s[i])
-			r[i++] = wrdmem(s);
+		while (s[i] && s[i] != c)
+			r[x] = wrdmem(s, c);
 	}
-	r[i] = '\0';
+	r[i] = NULL;
 	return (r);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
+
+int main(void)
 {
-	const char *s = "Hello world my name is olivia";
-	char c = " ";
-	printf("new strings: %s\n",ft_split(s, c));
+	char *str = "Hello World my name is olivia";
+	char c = ' ';
+	char **result = ft_split(str, c);
+	int i = 0;
+
+	while (result[i])
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
+	return (0);
+
 }
-*/

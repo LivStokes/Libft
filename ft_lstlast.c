@@ -1,16 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                         ::::::::           */
+/*   ft_lstlast.c                                        :+:    :+:           */
+/*                                                      +:+                   */
+/*   By: olistoke <marvin@42.fr>                       +#+                    */
+/*                                                    +#+                     */
+/*   Created: 2026/03/18 14:43:23 by olistoke       #+#    #+#                */
+/*   Updated: 2026/03/18 15:09:32 by olistoke       ########   odam.nl        */
+/*                                                                            */
+/* ************************************************************************** */
+/*
 #include "libft.h"
 
-void    ft_lstadd_back(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-    t_list c;
-
-    c = *lst;
-    if (!c)
-        *lst = new;
-    else
-    {
-        while (c->next)
-            c = c->next;
-        c->next = new;
-    }
+	t_list
+	return ();
 }
+*/

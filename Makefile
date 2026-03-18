@@ -6,7 +6,7 @@
 #    By: olistoke <marvin@42.fr>                       +#+                     #
 #                                                     +#+                      #
 #    Created: 2026/03/10 14:39:21 by olistoke       #+#    #+#                 #
-#    Updated: 2026/03/16 18:18:06 by olistoke       ########   odam.nl         #
+#    Updated: 2026/03/18 15:14:11 by olistoke       ########   odam.nl         #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ SRC = ft_strlen.c \
 	  ft_striteri.c \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c \
-	  ft_ft_putendl_fd.c \
+	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c \
 	  ft_lstnew.c \
 	  ft_lstadd_front.c \

@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/13 14:38:17 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/16 18:11:25 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/18 14:56:27 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	while (s[slen])
-		s[slen]++;
-	if (start >= s_len)
+		slen++;
+	if (start >= slen)
 		len = 0;
-	else if (len > s_len - start)
+	else if (len > slen - start)
 		len = slen - start;
 	ss = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ss)

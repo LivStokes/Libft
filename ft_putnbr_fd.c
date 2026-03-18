@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/16 15:23:22 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/16 15:30:55 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/18 15:07:20 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 		n = -n;
 	}
 	if (n > 9)
-		ft_putnbr_fd(n / 10);
+		ft_putnbr_fd(n / 10, fd);
 	c = (n % 10) + '0';
 	write(fd, &c, 1);
 }

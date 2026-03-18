@@ -6,13 +6,13 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/11 18:00:26 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/16 18:09:48 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/18 15:39:41 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 

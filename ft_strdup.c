@@ -6,14 +6,14 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/12 16:23:03 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/16 18:11:11 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/18 15:49:21 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		i;
 	char	*r;

@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/16 12:11:25 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/16 12:29:50 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/17 12:01:55 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	char	*r;
-	int		i;
+	char				*r;
+	unsigned int		i;
 
 	i = 0;
 	if (!s || !f)
@@ -36,7 +36,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	r[i] = '\0';
 	return (r);
 }
-/*
+
 #include <stdio.h>
 
 char alternate_case(unsigned int i, char c)
@@ -61,4 +61,4 @@ int	main(void)
 	}
 	return (0);
 }
-*/
+

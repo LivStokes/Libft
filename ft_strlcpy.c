@@ -6,13 +6,13 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/11 15:17:08 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/12 17:16:51 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/18 15:40:32 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
