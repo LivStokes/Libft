@@ -1,10 +1,26 @@
 # Libft
 42 school's first project, libft, is about learning how the standard functions of C programming work, by coding them from scratch and creating a personal library.
 
+# Instructions
+## How to compile
+This library can be compiled using the Makefile.
+```
+make all        # compiles the functions to libft.a
+make clean      # removes object files
+make fclean     # removes object files and libft.a
+make re         # fclean and make
+```
 ## Usage
-make all to compile functions.
+include the header in your project:
+```
+#include "libft.h
+```
+Compile your program and link the library:
+```
+gcc main.c -L. -lft -o program_name
+```
 
-## Functions
+# Description
 The functions of libft are from the standard C library or other useful functions. They are mostly useful for character, string and memory manipulation.
 
 ### Functions to check and manipulate characters:
@@ -79,8 +95,7 @@ ft_lstmap <br/>
 - copies n bytes from memory area src to memory area dst. The memory areas must not overlap.
 
 **ft_memmove**
-> void *memmove(void *dst, const void *src, size_t len);
-- copies len bytes from string src to string dst. The memory areas may overlap; the copy is always done in a non-destructive manner.
+> void *memmove(void *dst, const void *src, size_t len); - copies len bytes from string src to string dst. The memory areas may overlap; the copy is always done in a non-destructive manner.
 
 **ft_memchr**
 > void *memchr(const void *s, int c, size_t n); 
@@ -91,8 +106,7 @@ ft_lstmap <br/>
 - compares byte string s1 against byte string s2. Both strings are assumed to be n bytes long.
 
 **ft_strlen**
-> size_t strlen(const char *s);
-- calculates the length of the string pointed to by s, excluding the terminating null byte ('\0').
+> size_t strlen(const char *s); - calculates the length of the string pointed to by s, excluding the terminating null byte ('\0').
 
 **ft_strlcpy**
 > size_t strlcpy(char *dst, const char *src, size_t dstsize); 
@@ -238,7 +252,13 @@ ft_lstmap <br/>
 > t_list *ft_lstmap(t_list *lst, void *(*f)(void *),　void (*del)(void *)); 
 - Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of an element if needed.
 
-
-# Resources
-- Geeksforgeeks
-- 
+# References
+- man pages from Linux/macOS:
+    - Primary resource for all standard functions.
+- CS50 Introduction to Computer Science:
+    - Gives foundational understanding of C through videos.
+- The Programming Language; by Kernighan and Richie:
+    - Gives deep understanding of C through literature.
+    
+- Gemini:
+    - LLM to help generate edge cases when testing functions.
