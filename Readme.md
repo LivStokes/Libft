@@ -9,8 +9,8 @@ make clean to clean the files by removing object files.
 The functions of libft are from the standard C library or other useful functions. They are mostly useful for character, string and memory manipulation.
 
 ### Functions to check and manipulate characters:
-ft_isalpha
-ft_isdigit
+ft_isalpha <br/>
+ft_isdigit <br/>
 ft_isalnum
 ft_isascii
 ft_isprint
