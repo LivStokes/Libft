@@ -137,7 +137,7 @@ ft_lstmap
 ### Part 2
 
 **ft_substr**
-char *ft_substr(char const *s, unsigned int start, size_t len);	
+> char *ft_substr(char const *s, unsigned int start, size_t len);	
 - Allocates (with malloc) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’.
 
 **ft_strjoin**
