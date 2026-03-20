@@ -64,7 +64,9 @@ ft_lstiter
 ft_lstmap
 
 
-### Function name, Prototype, Description
+## Function name, Prototype, Description
+### Part 1
+
 **ft_memset** - void *memset(void *b, int c, size_t len); 
 - writes len bytes of value c (converted to an unsigned char) to the string b.
 
@@ -127,57 +129,87 @@ ft_lstmap
 - converts an upper-case letter to the corresponding lower-case letter.
 
 **ft_calloc** - void * calloc(size_t count, size_t size); 
-- allocates size bytes and returns a pointer to the allocated memory.
+- Allocates size bytes and returns a pointer to the allocated memory.
 
 **ft_strdup** - char *strdup(const char *s1); 
-- returns a pointer to a new string which is a duplicate of the string s.
+- Returns a pointer to a new string which is a duplicate of the string s.
 
-**ft_substr**	char *ft_substr(char const *s, unsigned int start, size_t len);	
-Allocates (with malloc) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’.
+### Part 2
 
-**ft_strjoin**	char *ft_strjoin(char const *s1, char const *s2);	
-Allocates (with malloc) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’.
+**ft_substr**
+char *ft_substr(char const *s, unsigned int start, size_t len);	
+- Allocates (with malloc) and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’.
 
-**ft_strtrim**	char *ft_strtrim(char const *s1, char const *set);	
-Allocates (with malloc) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string.
+**ft_strjoin**
+char *ft_strjoin(char const *s1, char const *s2);	
+- Allocates (with malloc) and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’.
 
-ft_split	char **ft_split(char const *s, char c);	
-Allocates (with malloc) and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter. The array must be ended by a NULL pointer.
+**ft_strtrim**
+char *ft_strtrim(char const *s1, char const *set);	
+- Allocates (with malloc) and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string.
 
-ft_itoa	char *ft_itoa(int n);	
-Allocates (with malloc) and returns a string representing the integer received as an argument. Negative numbers must be handled.
+**ft_split**
+char **ft_split(char const *s, char c);	
+- Allocates (with malloc) and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter. The array must be ended by a NULL pointer.
 
-ft_strmapi	char *ft_strmapi(char const *s, char (*f)(unsigned int, char));	
-Applies the function ’f’ to each character of the string ’s’ to create a new string (with malloc(3)) resulting from successive applications of ’f’.
+**ft_itoa**
+char *ft_itoa(int n);	
+- Allocates (with malloc) and returns a string representing the integer received as an argument. Negative numbers must be handled.
 
-ft_putchar_fd	void ft_putchar_fd(char c, int fd);	
-Outputs the character ’c’ to the given file descriptor.
+**ft_strmapi**	
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));	
+- Applies the function ’f’ to each character of the string ’s’ to create a new string (with malloc(3)) resulting from successive applications of ’f’.
 
-ft_putstr_fd	void ft_putstr_fd(char *s, int fd);	
-Outputs the string ’s’ to the given file descriptor.
+**ft_putchar_fd**	
+void ft_putchar_fd(char c, int fd);	
+- Outputs the character ’c’ to the given file descriptor.
 
-ft_putendl_fd	void ft_putendl_fd(char *s, int fd);	
-Outputs the string ’s’ to the given file descriptor, followed by a newline.
+**ft_putstr_fd**	
+void ft_putstr_fd(char *s, int fd);	
+- Outputs the string ’s’ to the given file descriptor.
 
-ft_putnbr_fd void ft_putnbr_fd(int n, int fd);	
-Outputs the integer ’n’ to the given file descriptor.
+**ft_putendl_fd**	
+void ft_putendl_fd(char *s, int fd);	
+- Outputs the string ’s’ to the given file descriptor, followed by a newline.
 
-## Part 3 - Bonus Functions
-### Function name, Prototype, Description
-ft_lstnew	t_list *ft_lstnew(void *content);	Allocates (with malloc) and returns a new element. The variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.
+**ft_putnbr_fd**
+void ft_putnbr_fd(int n, int fd);	
+- Outputs the integer ’n’ to the given file descriptor.
 
-ft_lstadd_front	void ft_lstadd_front(t_list **lst, t_list *new);	Adds the element ’new’ at the beginning of the list.
+### Part 3
 
-ft_lstsize	int ft_lstsize(t_list *lst);	Counts the number of elements in a list.
+**ft_lstnew**
+t_list *ft_lstnew(void *content);	
+- Allocates (with malloc) and returns a new element. The variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.
 
-ft_lstlast	t_list *ft_lstlast(t_list *lst);	Returns the last element of the list.
+**ft_lstadd_front**	
+void ft_lstadd_front(t_list **lst, t_list *new);	
+- Adds the element ’new’ at the beginning of the list.
 
-ft_lstadd_back	void ft_lstadd_back(t_list **lst, t_list *new);	Adds the element ’new’ at the end of the list.
+**ft_lstsize**
+int ft_lstsize(t_list *lst);	
+- Counts the number of elements in a list.
 
-ft_lstdelone	void ft_lstdelone(t_list *lst, void (*del)(void*));	Takes as a parameter an element and frees the memory of the element’s content using the function ’del’ given as a parameter and free the element. The memory of ’next’ must not be freed.
+**ft_lstlast**
+t_list *ft_lstlast(t_list *lst);	
+- Returns the last element of the list.
 
-- ft_lstclear - void ft_lstclear(t_list **lst, void (*del)(void*)); - Deletes and frees the given element and every successor of that element, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.
+**ft_lstadd_back**
+void ft_lstadd_back(t_list **lst, t_list *new);	
+- Adds the element ’new’ at the end of the list.
 
-- ft_lstiter - void ft_lstiter(t_list *lst, void (*f)(void *)); - Iterates the list ’lst’ and applies the function ’f’ to the content of each element.
+**ft_lstdelone**
+void ft_lstdelone(t_list *lst, void (*del)(void*));	
+- Takes as a parameter an element and frees the memory of the element’s content using the function ’del’ given as a parameter and free the element. The memory of ’next’ must not be freed.
 
-- ft_lstmap - t_list *ft_lstmap(t_list *lst, void *(*f)(void *),　void (*del)(void *)); - Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of an element if needed.
+**ft_lstclear**
+void ft_lstclear(t_list **lst, void (*del)(void*)); 
+- Deletes and frees the given element and every successor of that element, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.
+
+**ft_lstiter**
+void ft_lstiter(t_list *lst, void (*f)(void *)); 
+- Iterates the list ’lst’ and applies the function ’f’ to the content of each element.
+
+**ft_lstmap** 
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *),　void (*del)(void *)); 
+- Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of an element if needed.
