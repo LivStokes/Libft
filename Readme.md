@@ -1,8 +1,8 @@
 # Libft
 42 school's first project, libft, is about learning how the standard functions of C programming work, by coding them from scratch and creating a personal library.
 
-# Instructions
-## How to compile
+## Instructions
+### How to compile
 This library can be compiled using the Makefile.
 ```
 make all        # compiles the functions to libft.a
@@ -10,7 +10,7 @@ make clean      # removes object files
 make fclean     # removes object files and libft.a
 make re         # fclean and make
 ```
-## Usage
+### Usage
 include the header in your project:
 ```
 #include "libft.h
@@ -20,7 +20,7 @@ Compile your program and link the library:
 gcc main.c -L. -lft -o program_name
 ```
 
-# Description
+## Description
 The functions of libft are from the standard C library or other useful functions. They are mostly useful for character, string and memory manipulation.
 
 ### Functions to check and manipulate characters:
@@ -79,8 +79,8 @@ ft_lstiter <br/>
 ft_lstmap <br/>
 
 
-## Function name, Prototype, Description
-### Part 1
+### Function name, Prototype, Description
+#### Part 1
 
 **ft_memset**
 > void *memset(void *b, int c, size_t len); 
@@ -172,7 +172,7 @@ ft_lstmap <br/>
 > char *strdup(const char *s1); 
 - Returns a pointer to a new string which is a duplicate of the string s.
 
-### Part 2
+#### Part 2
 
 **ft_substr**
 > char *ft_substr(char const *s, unsigned int start, size_t len);	
@@ -214,7 +214,7 @@ ft_lstmap <br/>
 > void ft_putnbr_fd(int n, int fd);	
 - Outputs the integer ’n’ to the given file descriptor.
 
-### Part 3
+#### Part 3
 
 **ft_lstnew**
 > t_list *ft_lstnew(void *content);	
@@ -252,13 +252,13 @@ ft_lstmap <br/>
 > t_list *ft_lstmap(t_list *lst, void *(*f)(void *),　void (*del)(void *)); 
 - Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of an element if needed.
 
-# References
+## References
 - man pages from Linux/macOS:
     - Primary resource for all standard functions.
 - CS50 Introduction to Computer Science:
     - Gives foundational understanding of C through videos.
-- The C Programming Language; by Kernighan and Richie:
+- The Programming Language; by Kernighan and Richie:
     - Gives deep understanding of C through literature.
-    
+
 - Gemini:
     - LLM to help generate edge cases when testing functions.
