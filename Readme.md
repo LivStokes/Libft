@@ -80,7 +80,8 @@ ft_lstmap <br/>
 - copies n bytes from memory area src to memory area dst. The memory areas must not overlap.
 
 **ft_memmove**
-> void *memmove(void *dst, const void *src, size_t len); - copies len bytes from string src to string dst. The memory areas may overlap; the copy is always done in a non-destructive manner.
+> void *memmove(void *dst, const void *src, size_t len);
+- copies len bytes from string src to string dst. The memory areas may overlap; the copy is always done in a non-destructive manner.
 
 **ft_memchr**
 > void *memchr(const void *s, int c, size_t n); 
@@ -91,7 +92,8 @@ ft_lstmap <br/>
 - compares byte string s1 against byte string s2. Both strings are assumed to be n bytes long.
 
 **ft_strlen**
-> size_t strlen(const char *s); - calculates the length of the string pointed to by s, excluding the terminating null byte ('\0').
+> size_t strlen(const char *s);
+- calculates the length of the string pointed to by s, excluding the terminating null byte ('\0').
 
 **ft_strlcpy**
 > size_t strlcpy(char *dst, const char *src, size_t dstsize); 
