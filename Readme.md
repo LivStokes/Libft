@@ -9,62 +9,62 @@ make clean to clean the files by removing object files.
 The functions of libft are from the standard C library or other useful functions. They are mostly useful for character, string and memory manipulation.
 
 ### Functions to check and manipulate characters:
-ft_isalpha <br/>
-ft_isdigit <br/>
-ft_isalnum
-ft_isascii
-ft_isprint
-ft_toupper
-ft_tolower
+ft_isalpha <br/> 
+ft_isdigit <br/> 
+ft_isalnum <br/>
+ft_isascii <br/>
+ft_isprint <br/>
+ft_toupper <br/>
+ft_tolower <br/>
 
 ### Functions to manipulate strings:
-ft_strlen
-ft_strlcpy
-ft_strlcat
-ft_strchr
-ft_strrchr
-ft_strncmp
-ft_strnstr
-ft_substr
-ft_strjoin
-ft_strtrim
-ft_split
-ft_strmapi
-ft_striteri
+ft_strlen <br/>
+ft_strlcpy <br/>
+ft_strlcat <br/>
+ft_strchr <br/>
+ft_strrchr <br/>
+ft_strncmp <br/>
+ft_strnstr <br/>
+ft_substr <br/>
+ft_strjoin <br/>
+ft_strtrim <br/>
+ft_split <br/>
+ft_strmapi <br/>
+ft_striteri <br/>
 
 ### Functions to manipulate memory:
-ft_calloc
-ft_memset
-ft_bzero
-ft_memcpy
-ft_memmove
-ft_memchr
-ft_memcmp
-ft_strdup
+ft_calloc <br/>
+ft_memset <br/>
+ft_bzero <br/>
+ft_memcpy <br/>
+ft_memmove <br/>
+ft_memchr <br/>
+ft_memcmp <br/>
+ft_strdup <br/>
 
 ### Functions for numbers:
-ft_atoi
-ft_itoa
+ft_atoi <br/>
+ft_itoa <br/>
 
 ### Functions to write to a file descriptor:
-ft_putchar_fd
-ft_putstr_fd
-ft_putendl_fd
-ft_putnbr_fd
+ft_putchar_fd <br/>
+ft_putstr_fd <br/>
+ft_putendl_fd <br/>
+ft_putnbr_fd <br/>
 
 ### Functions that deal with list manipulation:
-ft_lstnew
-ft_lstadd_front
-ft_lstsize
-ft_lstlast
-ft_lstadd_back
-ft_lstdelone
-ft_lstclear
-ft_lstiter
-ft_lstmap
+ft_lstnew <br/>
+ft_lstadd_front <br/>
+ft_lstsize <br/>
+ft_lstlast <br/>
+ft_lstadd_back <br/>
+ft_lstdelone <br/>
+ft_lstclear <br/>
+ft_lstiter <br/>
+ft_lstmap <br/>
 
 
-Function name, Prototype, Description
+## Function name, Prototype, Description
 ### Part 1
 
 **ft_memset**
@@ -234,5 +234,5 @@ Function name, Prototype, Description
 - Iterates the list ’lst’ and applies the function ’f’ to the content of each element.
 
 **ft_lstmap** 
-> t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *)); 
+> t_list *ft_lstmap(t_list *lst, void *(*f)(void *),　void (*del)(void *)); 
 - Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of an element if needed.
