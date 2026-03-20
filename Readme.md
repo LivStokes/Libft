@@ -64,7 +64,7 @@ ft_lstiter
 ft_lstmap
 
 
-## Function name, Prototype, Description
+Function name, Prototype, Description
 ### Part 1
 
 **ft_memset**
