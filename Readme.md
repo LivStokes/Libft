@@ -3,7 +3,6 @@
 
 ## Usage
 make all to compile functions.
-make clean to clean the files by removing object files.
 
 ## Functions
 The functions of libft are from the standard C library or other useful functions. They are mostly useful for character, string and memory manipulation.
