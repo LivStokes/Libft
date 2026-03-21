@@ -1,14 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                          ::::::::            #
-#    Readme.md                                           :+:    :+:            #
-#                                                       +:+                    #
-#    By: olistoke <marvin@42.fr>                       +#+                     #
-#                                                     +#+                      #
-#    Created: 2026/03/21 17:58:35 by olistoke       #+#    #+#                 #
-#    Updated: 2026/03/21 18:22:26 by olistoke       ########   odam.nl         #
-#                                                                              #
-# **************************************************************************** #
 This project has been created as part of the 42 curriculum by olistoke.
 
 # Libft
