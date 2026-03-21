@@ -259,7 +259,7 @@ ft_lstmap <br/>
     - Primary resource for all standard functions.
 - CS50 Introduction to Computer Science:
     - Gives foundational understanding of C through videos.
-- The Programming Language; by Kernighan and Richie:
+- The C Programming Language; by Kernighan and Richie:
     - Gives deep understanding of C through literature.
 
 - Gemini:
