@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/12 16:26:49 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/18 16:03:52 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/20 12:46:55 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
 	void	*ptr;
 
-	if (!nmemb || nmemb != 0)
+	if (nmemb != 0 && size > SIZE_MAX / nmemb)
 		return (NULL);
-	i = nmemb * size;
-	ptr = (void *)malloc(i);
+	ptr = (void *)malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, i);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/13 19:14:52 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/18 14:58:54 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/21 17:39:31 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	r = malloc(sizeof(char) * (i + j + 1));
 	if (!r)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
+	i = -1;
+	while (s1[++i])
 		r[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j])
-	{
+	j = -1;
+	while (s2[++j])
 		r[i + j] = s2[j];
-		j++;
-	}
 	r[i + j] = '\0';
 	return (r);
 }

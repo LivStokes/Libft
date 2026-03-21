@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/16 12:30:26 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/18 15:06:19 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/21 18:08:21 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*
-int 	main(void)
-{
-	
-	return (0);
-}
-*/

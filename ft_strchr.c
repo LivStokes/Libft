@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/11 16:38:30 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/16 18:09:30 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/21 18:07:47 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)&s[i]);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	const char s[20] = "Hello World";
-	int	c = 'l';
-	printf("String: %s\n", ft_strchr(s, c));
-	return (0);
-}
-*/

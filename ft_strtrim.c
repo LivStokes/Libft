@@ -6,7 +6,7 @@
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/13 19:29:07 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/16 17:46:23 by olistoke       ########   odam.nl        */
+/*   Updated: 2026/03/21 18:08:05 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	r[x] = '\0';
 	return (r);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	const char s1[20] = "Hello world";
-	const char set[20] = "ed";
-	printf("Trim: %s\n", ft_strtrim(s1, set));
-	return (0);
-}
-*/

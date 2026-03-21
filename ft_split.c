@@ -5,28 +5,35 @@
 /*                                                      +:+                   */
 /*   By: olistoke <marvin@42.fr>                       +#+                    */
 /*                                                    +#+                     */
-/*   Created: 2026/03/14 16:40:09 by olistoke       #+#    #+#                */
-/*   Updated: 2026/03/18 16:52:34 by olistoke       ########   odam.nl        */
+/*   Created: 2026/03/19 11:59:16 by olistoke       #+#    #+#                */
+/*   Updated: 2026/03/21 17:53:59 by olistoke       ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*wrdmem(char const *s, char c)
+static int	wrdlen(char const *s, char c)
 {
-	int		i;
-	char	*r;
-	int		len;
+	int	i;
 
 	i = 0;
-	len = 0;
-	while (s[len] && s[len] != c)
-		len++;
-	r = malloc(sizeof(char) * (len + 1));
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
+static char	*wrdmem(char const *s, char c)
+{
+	int		i;
+	int		wrd;
+	char	*r;
+
+	i = 0;
+	wrd = wrdlen(s, c);
+	r = malloc(sizeof(char) * (wrd + 1));
 	if (!r)
 		return (NULL);
-	while (i < len)
+	while (s[i] && s[i] != c)
 	{
 		r[i] = s[i];
 		i++;
@@ -35,21 +42,21 @@ char	*wrdmem(char const *s, char c)
 	return (r);
 }
 
-int	wrdcount(char const *s, char c)
+static int	wrdcount(char const *s, char c)
 {
-	int	count;
 	int	i;
+	int	count;
 
-	count = 0;
 	i = 0;
+	count = 0;
 	while (s[i])
 	{
 		while (s[i] == c && s[i])
 			i++;
-		if (s[i])
+		if (s[i] != '\0')
 			count++;
 		while (s[i] != c && s[i])
-				i++;
+			i++;
 	}
 	return (count);
 }
@@ -57,41 +64,28 @@ int	wrdcount(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	char	**r;
-	int		len;
 	int		x;
+	char	**r;
 
 	i = 0;
 	x = 0;
-	len = wrdcount(s, c);
-	r = (char **)malloc(sizeof(char *) * (len + 1));
-	if (!r)
+	r = (char **)malloc(sizeof(char *) * (wrdcount(s, c) + 1));
+	if (!r || !s)
 		return (NULL);
-	i = 0;
-	while (s[i])
+	while (x < wrdcount(s, c))
 	{
 		while (s[i] == c && s[i])
 			i++;
+		if (s[i] != '\0')
+		{
+			r[x] = wrdmem(&s[i], c);
+			if (!r[x])
+				return (NULL);
+			x++;
+		}
 		while (s[i] && s[i] != c)
-			r[x] = wrdmem(s, c);
+			i++;
 	}
-	r[i] = NULL;
+	r[x] = NULL;
 	return (r);
-}
-
-
-int main(void)
-{
-	char *str = "Hello World my name is olivia";
-	char c = ' ';
-	char **result = ft_split(str, c);
-	int i = 0;
-
-	while (result[i])
-	{
-		printf("%s\n", result[i]);
-		i++;
-	}
-	return (0);
-
 }
