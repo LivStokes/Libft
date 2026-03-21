@@ -251,16 +251,20 @@ ft_lstmap <br/>
 - Iterates the list ’lst’ and applies the function ’f’ to the content of each element.
 
 **ft_lstmap** 
-> t_list *ft_lstmap(t_list *lst, void *(*f)(void *),　void (*del)(void *)); 
+> t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *)); 
 - Iterates the list ’lst’ and applies the function ’f’ to the content of each element. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of an element if needed.
 
 ## References
 - man pages from Linux/macOS:
     - Primary resource for all standard functions.
+	- [manual](https://linux.die.net/man/)
 - CS50 Introduction to Computer Science:
     - Gives foundational understanding of C through videos.
+	- [CS50](https://cs50.harvard.edu/x/)
 - The C Programming Language; by Kernighan and Richie:
     - Gives deep understanding of C through literature.
+	- [C Book](https://en.wikipedia.org/wiki/The_C_Programming_Language)
 
 - Gemini:
     - LLM to help generate edge cases when testing functions.
+	- [Gemini](https://gemini.google.com/app)
